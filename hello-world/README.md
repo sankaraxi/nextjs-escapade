@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## RSC React Server Components
 
-## Getting Started
+RSC is a new way to build React applications. It allows you to write your components in a way that is familiar to you, but run them in a Node.js environment. This means that you can build your entire application in React, without having to worry about the limitations of the browser.
 
-First, run the development server:
+- Server Components are written in React and run on the server.
+- Server Components can fetch data and run server-side logic.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Client Components are written in React and run in the browser.
+- Client Components can't fetch data or run server-side logic.
+- Hooks can be used in client componets.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Routing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js has a file-system based router built on the `file-based routing` convention.
+- The `pages` directory is special in Next.js. Each `.js` file inside the `pages` directory is treated as a route.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Routing Conventions
+- all rouutes must be place in the app folder
+- every file that corresponds to a route must be named as pages.js or pages.tsx
 
-## Learn More
+// Nested Routes
 
-To learn more about Next.js, take a look at the following resources:
+- Nested routes are supported in Next.js by creating a folder inside the `pages` directory.
+- The folder name is used as part of the route.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+// Dynamic Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Dynamic routes are supported in Next.js by creating a file inside the `pages` directory with square brackets `[]` in the filename.
+- The square brackets `[]` indicate that the route is dynamic.
 
-## Deploy on Vercel
+// Nested Dynamic Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Nested dynamic routes are supported in Next.js by creating a folder inside the `pages` directory with square brackets `[]` in the folder name.
+- The square brackets `[]` indicate that the route is dynamic.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+// Catch-All Segments
