@@ -12,9 +12,12 @@ export default function PlaceOrder(){
     }
     return (
 
-        <div>
+        <div className="flex flex-col justify-center items-center p-4 m-4 w-full">
             <h1 className="text-4xl font-bold">Place your Order!!!</h1>
-            <button onClick={handleClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Place Order</button>
+            <div className="pt-2"   >
+                <button onClick={handleClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Place Order</button>
+            </div>
+            
         </div>
     )
 }
