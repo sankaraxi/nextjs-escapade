@@ -20,6 +20,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
         <p className="text-30-semibold">
           {query ? `Search results for "${query}"` : "All Startups"}
         </p>
+
+        <ul className="card_grid">
+
+        </ul>
       </section>
     </>
   );
