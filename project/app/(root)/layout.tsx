@@ -1,10 +1,12 @@
-const layout = ({children}: {children: React.ReactNode}) => {
+import Navbar from "../components/Navbar"
+
+
+const layout = ({children} : Readonly<{children: React.ReactNode}>) => {
   return (
-    <div>
-        <h1>Root Header</h1>
+    <main className="font-work-sans">
+        <Navbar />
         {children}
-        <h1>Root Footer</h1>
-    </div>
+    </main>
   )
 }
 
