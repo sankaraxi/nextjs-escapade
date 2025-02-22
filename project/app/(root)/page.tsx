@@ -1,16 +1,26 @@
-import HelloWorld from "../components/HelloWorld";
+import SearchForm from "../../components/SearchForm";
 
+export default async function Home({ searchParams }: { searchParams: Promise<{ query?: string }> }) {
+  const params = await searchParams;
+  const query = params?.query || ""; // Safely handle undefined values
 
-
-export default function Home() {
-  console.log("This is the home page");
-  console.log("This is the home page from server");
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-center">
-        Sankar K G
-      </h1>
-      <HelloWorld />
-    </div>
-  ); 
+    <>
+      <section className="pink_container">
+        <h1 className="heading">
+          Pitch your Venture, <br /> Connect with Capitalists
+        </h1>
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual Competitions.
+        </p>
+        <SearchForm query={query} />
+      </section>
+
+      <section className="section_container">
+        <p className="text-30-semibold">
+          {query ? `Search results for "${query}"` : "All Startups"}
+        </p>
+      </section>
+    </>
+  );
 }
