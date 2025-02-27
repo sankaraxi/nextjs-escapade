@@ -1,5 +1,6 @@
 import StartUpCard from "@/components/StartUpCard";
 import SearchForm from "../../components/SearchForm";
+import { AuthError } from "next-auth";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ query?: string }> }) {
   const params = await searchParams;
@@ -10,7 +11,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
       _createdAt: new Date(),
       _id: 1,
       views: 55,
-      author: { _id: 1},
+      author: { _id: 1, name: "John Doe" },
       description: "A new way to connect with people",
       image:"https://plus.unsplash.com/premium_photo-1681562502996-bcfad45d4def?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cm9ib3RzfGVufDB8fDB8fHww",
       category:"Robots",
