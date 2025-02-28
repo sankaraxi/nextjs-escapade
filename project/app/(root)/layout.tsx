@@ -7,7 +7,7 @@ const layout = ({children} : Readonly<{children: React.ReactNode}>) => {
         <Navbar />
         {children}
     </main>
-  )
+  ) 
 }
 
 export default layout
